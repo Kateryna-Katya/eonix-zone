@@ -1,56 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/eonix-zone/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eonix-Zone | Карьерный апгрейд и инновации</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lexend:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/eonix-zone/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/eonix-zone/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/eonix-zone/assets/styles-vXGDkSfl.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="container header__container">
+    <a href="/" class="logo">
+      <span class="logo__icon"></span>
+      <span class="logo__text">Eonix<span class="accent">-</span>Zone</span>
+    </a>
+
+    <nav class="nav" id="nav-menu">
+      <ul class="nav__list">
+        <li><a href="#hero" class="nav__link">Главная</a></li>
+        <li><a href="#methodology" class="nav__link">Методология</a></li>
+        <li><a href="#trajectory" class="nav__link">Траектория роста</a></li>
+        <li><a href="#blog" class="nav__link">Блог</a></li>
+        <li><a href="#reviews" class="nav__link">Отзывы</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--secondary">Связаться</a>
+      <button class="burger" id="burger-menu" aria-label="Открыть меню">
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge fade-in">Платформа года 2026</div>
+            <h1 class="hero__title">
+                <span class="text-reveal">Технология нового</span>
+                <span class="text-reveal">поколения для вашего</span>
+                <span class="text-reveal accent">карьерного апгрейда</span>
+            </h1>
+            <p class="hero__subtitle fade-in">
+                Решения, которые меняют правила игры. Мы помогаем переосмыслить подход к развитию и построить карьеру,
+                которая работает на вас, используя AI-инструменты для реальных задач.
+            </p>
+            <div class="hero__actions fade-in">
+                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                <a href="#methodology" class="btn btn--outline">Узнать детали</a>
+            </div>
+            <div class="hero__stats fade-in">
+                <div class="stat-item">
+                    <span class="stat-item__val">150%</span>
+                    <span class="stat-item__label">Средний рост дохода</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-item__val">24/7</span>
+                    <span class="stat-item__label">Экспертная поддержка</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="visual-card">
+                <div class="visual-card__header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <div class="visual-card__body">
+                    <div class="chart-line"></div>
+                    <div class="chart-line"></div>
+                    <div class="chart-line"></div>
+                </div>
+            </div>
+            <div class="floating-element float-1">Upgrade</div>
+            <div class="floating-element float-2">Strategy</div>
+            <div class="hero__grid-bg"></div>
+        </div>
+    </div>
+</section>
+<section class="methodology" id="methodology">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-header__badge">Как это работает</span>
+            <h2 class="section-header__title">Методологии, доказавшие свою эффективность</h2>
+            <p class="section-header__subtitle">
+                Мы переосмыслили подход к развитию, объединив классический коучинг и AI-инструменты для реальных задач.
+            </p>
+        </div>
+
+        <div class="methodology__grid">
+            <div class="m-card fade-in">
+                <div class="m-card__icon">
+                    <i data-lucide="target"></i>
+                </div>
+                <h3 class="m-card__title">Аудит потенциала</h3>
+                <p class="m-card__text">
+                    Глубокий анализ ваших текущих навыков и выявление скрытых точек роста для экспансии на новые рынки.
+                </p>
+                <div class="m-card__footer">Этап 01</div>
+            </div>
+
+            <div class="m-card fade-in">
+                <div class="m-card__icon">
+                    <i data-lucide="cpu"></i>
+                </div>
+                <h3 class="m-card__title">AI-навигация</h3>
+                <p class="m-card__text">
+                    Использование нейросетей для мониторинга скрытых вакансий и оптимизации вашего профессионального
+                    профиля.
+                </p>
+                <div class="m-card__footer">Этап 02</div>
+            </div>
+
+            <div class="m-card fade-in">
+                <div class="m-card__icon">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <h3 class="m-card__title">Стратегия роста</h3>
+                <p class="m-card__text">
+                    Пошаговый путь, понятный каждому: от корректировки позиционирования до получения оффера мечты.
+                </p>
+                <div class="m-card__footer">Этап 03</div>
+            </div>
+
+            <div class="m-card fade-in">
+                <div class="m-card__icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3 class="m-card__title">Поддержка 360°</h3>
+                <p class="m-card__text">
+                    Экспертная поддержка на всех этапах переговоров и адаптации в новой роли в странах ЕС и
+                    Великобритании.
+                </p>
+                <div class="m-card__footer">Этап 04</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="trajectory" id="trajectory">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-header__badge">Ваш путь</span>
+            <h2 class="section-header__title">Траектория вашего успеха</h2>
+            <p class="section-header__subtitle">Мы разработали пошаговый путь, который превращает хаотичный поиск в
+                стратегическое доминирование на рынке труда.</p>
+        </div>
+
+        <div class="trajectory__wrapper">
+            <div class="trajectory__line"></div>
+
+            <div class="trajectory__items">
+                <div class="t-step fade-in">
+                    <div class="t-step__marker">01</div>
+                    <div class="t-step__content">
+                        <h4 class="t-step__title">Deep Audit</h4>
+                        <p class="t-step__text">Анализ текущего позиционирования и упаковка экспертности по стандартам
+                            Tier-1 компаний.</p>
+                    </div>
+                </div>
+
+                <div class="t-step fade-in">
+                    <div class="t-step__marker">02</div>
+                    <div class="t-step__content">
+                        <h4 class="t-step__title">Market Fit</h4>
+                        <p class="t-step__text">Адаптация стратегии под рынок Великобритании и Европы. Поиск идеальной
+                            ниши для роста.</p>
+                    </div>
+                </div>
+
+                <div class="t-step fade-in">
+                    <div class="t-step__marker">03</div>
+                    <div class="t-step__content">
+                        <h4 class="t-step__title">AI-Acceleration</h4>
+                        <p class="t-step__text">Внедрение нейросетей в ваши рабочие процессы для кратного увеличения
+                            личной эффективности.</p>
+                    </div>
+                </div>
+
+                <div class="t-step fade-in">
+                    <div class="t-step__marker">04</div>
+                    <div class="t-step__content">
+                        <h4 class="t-step__title">Top Tier Offer</h4>
+                        <p class="t-step__text">Финальная стадия: получение оффера и сопровождение на этапе
+                            испытательного срока.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="innovations" id="innovations">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-header__badge">Технологии</span>
+            <h2 class="section-header__title">AI-инструменты, которые работают на вас</h2>
+            <p class="section-header__subtitle">
+                Мы интегрировали передовую цифровую инфраструктуру в процесс карьерного роста, чтобы автоматизировать
+                рутину и сфокусироваться на стратегии.
+            </p>
+        </div>
+
+        <div class="innovations__grid">
+            <div class="innovations__visual fade-in">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="terminal-title">Eonix AI Core // System Status: Active</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="scanner-beam"></div>
+
+                        <div class="terminal-content active" id="term-cv">
+                            <div class="tc-icon"><i data-lucide="file-search"></i></div>
+                            <h4 class="tc-title">Анализ профиля (ATS)</h4>
+                            <div class="tc-data">
+                                <p>> Загрузка данных... OK</p>
+                                <p>> Сканирование ключевых слов... OK</p>
+                                <p class="highlight">> Обнаружено: Соответствие вакансиям Tier-1 — 92%</p>
+                                <p>> Рекомендация: Усилить блок "Achievements"</p>
+                            </div>
+                        </div>
+
+                        <div class="terminal-content" id="term-interview">
+                            <div class="tc-icon"><i data-lucide="mic"></i></div>
+                            <h4 class="tc-title">Симуляция интервью</h4>
+                            <div class="tc-data">
+                                <p>> Инициализация голосового модуля... OK</p>
+                                <p>> Анализ темпа речи и уверенности... OK</p>
+                                <p class="highlight">> Результат: Убедительность аргументации — Высокая</p>
+                                <p>> Зона роста: Сократить паузы при ответах на поведенческие вопросы.</p>
+                            </div>
+                        </div>
+
+                        <div class="terminal-content" id="term-market">
+                            <div class="tc-icon"><i data-lucide="radar"></i></div>
+                            <h4 class="tc-title">Предиктивный анализ рынка</h4>
+                            <div class="tc-data">
+                                <p>> Мониторинг скрытых вакансий (Лондон, Берлин)... OK</p>
+                                <p>> Анализ спроса на навыки Q3 2026... OK</p>
+                                <p class="highlight">> Тренд: Рост спроса на AI-driven Project Managers (+45%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="innovations__controls fade-in">
+                <button class="control-item active" data-target="term-cv">
+                    <span class="control-icon"><i data-lucide="file-text"></i></span>
+                    <div class="control-info">
+                        <h4 class="control-title">AI-Оптимизация профиля</h4>
+                        <p class="control-desc">Адаптация резюме и LinkedIn под алгоритмы ATS систем международных
+                            корпораций.</p>
+                    </div>
+                </button>
+
+                <button class="control-item" data-target="term-interview">
+                    <span class="control-icon"><i data-lucide="users"></i></span>
+                    <div class="control-info">
+                        <h4 class="control-title">Тренировка интервью</h4>
+                        <p class="control-desc">Отработка сложных вопросов с цифровым аватаром и анализ невербальных
+                            сигналов.</p>
+                    </div>
+                </button>
+
+                <button class="control-item" data-target="term-market">
+                    <span class="control-icon"><i data-lucide="bar-chart-4"></i></span>
+                    <div class="control-info">
+                        <h4 class="control-title">Мониторинг скрытого рынка</h4>
+                        <p class="control-desc">Выявление непубличных вакансий и растущих ниш до того, как они станут
+                            массовыми.</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-header__badge">База знаний</span>
+            <h2 class="section-header__title">Карьерный апгрейд: Инсайты и практика</h2>
+            <p class="section-header__subtitle">
+                Практики, применимые уже сегодня. Читайте о том, как строить карьеру в эпоху тотальной цифровизации.
+            </p>
+        </div>
+
+        <div class="blog__grid">
+            <article class="b-card fade-in">
+                <div class="b-card__image-wrap">
+                    <img src="img/placeholder.png" alt="AI in HR" class="b-card__img">
+                    <div class="b-card__tag">Технологии</div>
+                </div>
+                <div class="b-card__content">
+                    <div class="b-card__meta">
+                        <span><i data-lucide="calendar"></i> 12 Янв, 2026</span>
+                        <span><i data-lucide="clock"></i> 5 мин чтения</span>
+                    </div>
+                    <h3 class="b-card__title">AI в рекрутинге 2026: Как не остаться за бортом автоматизации</h3>
+                    <p class="b-card__excerpt">Разбираем, как работают алгоритмы первичного отбора в компаниях Лондона и
+                        как адаптировать резюме под роботов.</p>
+                    <a href="#" class="b-card__link">Читать далее <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="b-card fade-in">
+                <div class="b-card__image-wrap">
+                    <img src="img/placeholder.png" alt="Negotiations" class="b-card__img">
+                    <div class="b-card__tag">Стратегия</div>
+                </div>
+                <div class="b-card__content">
+                    <div class="b-card__meta">
+                        <span><i data-lucide="calendar"></i> 08 Янв, 2026</span>
+                        <span><i data-lucide="clock"></i> 8 мин чтения</span>
+                    </div>
+                    <h3 class="b-card__title">Искусство оффера: Как договориться о +40% к текущему доходу</h3>
+                    <p class="b-card__excerpt">Психологические триггеры и проверенные методики ведения переговоров с
+                        HR-директорами международных корпораций.</p>
+                    <a href="#" class="b-card__link">Читать далее <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="b-card fade-in">
+                <div class="b-card__image-wrap">
+                    <img src="img/placeholder.png" alt="LinkedIn" class="b-card__img">
+                    <div class="b-card__tag">Инновации</div>
+                </div>
+                <div class="b-card__content">
+                    <div class="b-card__meta">
+                        <span><i data-lucide="calendar"></i> 05 Янв, 2026</span>
+                        <span><i data-lucide="clock"></i> 6 мин чтения</span>
+                    </div>
+                    <h3 class="b-card__title">Личный бренд как цифровая инфраструктура специалиста</h3>
+                    <p class="b-card__excerpt">Почему ваш профиль в LinkedIn важнее диплома и как превратить его в
+                        магнит для топовых предложений.</p>
+                    <a href="#" class="b-card__link">Читать далее <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+
+        <div class="blog__footer fade-in">
+            <a href="#" class="btn btn--outline">Посмотреть все статьи</a>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info fade-in">
+                <span class="section-header__badge">Связь с экспертом</span>
+                <h2 class="section-header__title">Готовы к квантовому скачку в карьере?</h2>
+                <p class="section-header__subtitle">
+                    Запросите бесплатную консультацию по всем вопросам. Экспертная поддержка на всех этапах вашего
+                    развития.
+                </p>
+
+                <ul class="contact__list">
+                    <li>
+                        <div class="c-icon"><i data-lucide="check-circle"></i></div>
+                        <span>Анализ вашей текущей ситуации за 15 минут</span>
+                    </li>
+                    <li>
+                        <div class="c-icon"><i data-lucide="check-circle"></i></div>
+                        <span>Индивидуальный план развития (Roadmap)</span>
+                    </li>
+                    <li>
+                        <div class="c-icon"><i data-lucide="check-circle"></i></div>
+                        <span>Доступ к закрытому сообществу выпускников</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact__form-container fade-in">
+                <form id="eonix-form" class="c-form">
+                    <div class="c-form__group">
+                        <label for="user_name" class="c-form__label">Ваше имя</label>
+                        <input type="text" id="user_name" name="name" class="c-form__input" placeholder="Александр"
+                            required>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label for="user_email" class="c-form__label">Электронная почта</label>
+                        <input type="email" id="user_email" name="email" class="c-form__input"
+                            placeholder="hello@example.com" required>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label for="user_phone" class="c-form__label">Телефон (только цифры)</label>
+                        <input type="tel" id="user_phone" name="phone" class="c-form__input" placeholder="442079460958"
+                            required>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label class="c-form__label">Подтвердите, что вы не робот: <span
+                                id="captcha-question"></span></label>
+                        <input type="text" id="captcha-answer" class="c-form__input" placeholder="Ваш ответ" required>
+                    </div>
+
+                    <div class="c-form__checkbox">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">Я согласен с <a href="privacy.html" target="_blank">политикой
+                                конфиденциальности</a></label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+                        <span>Начать сейчас</span>
+                    </button>
+
+                    <div id="form-success" class="form-result success">
+                        <div class="form-result__icon"><i data-lucide="check"></i></div>
+                        <div class="form-result__text">
+                            <h4>Заявка принята!</h4>
+                            <p>Мы свяжемся с вами в течение часа.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="/" class="logo logo--footer">
+        <span class="logo__text">Eonix-Zone</span>
       </a>
-    </p>
+      <p class="footer__description">
+        Решения, которые меняют правила игры в вашей карьере. Передовая цифровая инфраструктура для профессионального
+        роста.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__links">
+        <li><a href="#hero">Главная</a></li>
+        <li><a href="#methodology">Методология</a></li>
+        <li><a href="#trajectory">Траектория</a></li>
+        <li><a href="#blog">Блог</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Документы</h4>
+      <ul class="footer__links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="personal-data-policy.html">Data Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Контакты</h4>
+      <ul class="footer__contact-info">
+        <li>
+          <i data-lucide="map-pin"></i>
+          <span>22 Bishopsgate, London EC2N 4BQ, United Kingdom</span>
+        </li>
+        <li>
+          <i data-lucide="phone"></i>
+          <span>+44 20 7946 0958</span>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <span>hello@eonix-zone.blog</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-content">
+      <p>&copy; 2026 Eonix-Zone. Все права защищены. Предложение активно только в странах ЕС.</p>
+    </div>
   </div>
 </footer>
-
 
   </body>
 </html>
