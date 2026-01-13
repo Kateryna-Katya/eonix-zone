@@ -1306,3 +1306,260 @@ img {
         gap: 60px;
     }
 }
+/* --- MOBILE MENU STYLES --- */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-nav__list {
+    text-align: center;
+}
+
+.mobile-nav__link {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 24px;
+    transition: var(--transition);
+}
+
+.mobile-nav__link:hover {
+    color: var(--accent-color);
+}
+
+/* Burger Animation */
+.burger.active span {
+    background: transparent;
+}
+
+.burger.active span::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span::after {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.burger span::before,
+.burger span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--text-primary);
+    left: 0;
+    transition: var(--transition);
+}
+
+.burger span::before {
+    top: -8px;
+}
+
+.burger span::after {
+    bottom: -8px;
+}
+
+/* --- COOKIE POPUP STYLES --- */
+.cookie-popup {
+    position: fixed;
+    bottom: -100%;
+    /* Скрыто снизу */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 2000;
+    transition: bottom 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cookie-popup.show {
+    bottom: 0;
+}
+
+.cookie-popup__content {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(22, 26, 34, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-color);
+    padding: 20px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.cookie-popup__icon {
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.cookie-popup__text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.cookie-popup__text a {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.btn--sm {
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 576px) {
+    .cookie-popup__content {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+}
+/* --- REVIEWS SECTION --- */
+.reviews {
+    padding: 100px 0;
+    background: #0d1117;
+}
+
+.reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.r-card {
+    background: var(--surface-color);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.r-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.r-card__rating {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 20px;
+    color: #fbbf24;
+    /* Золотой для звезд */
+}
+
+.r-card__rating svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.r-card__text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    font-style: italic;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.r-card__author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.r-card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+}
+
+.r-card__name {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.r-card__pos {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+/* --- LEGAL PAGES STYLES --- */
+.pages {
+    padding: 160px 0 100px;
+    min-height: 80vh;
+}
+
+.pages h1 {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+.pages h2 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.pages p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pages ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.pages li {
+    color: var(--text-secondary);
+    list-style: disc;
+    margin-bottom: 10px;
+}
+.accent-link {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.accent-link:hover {
+    border-bottom-color: var(--accent-color);
+}
+
+/* Стили для бейджа документа */
+.pages .section-header__badge {
+    margin-bottom: 15px;
+}

@@ -162,3 +162,45 @@ contactForm?.addEventListener('submit', (e) => {
 
 // Инициализируем капчу при загрузке
 generateCaptcha();
+// --- МОБИЛЬНОЕ МЕНЮ ---
+const burgerBtn = document.getElementById('burger-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-nav__link');
+
+const toggleMenu = () => {
+    burgerBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    // Блокируем скролл при открытом меню
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+};
+
+burgerBtn.addEventListener('click', toggleMenu);
+
+// Закрываем меню при клике на ссылку
+mobileLinks.forEach(link => {
+    link.addEventListener('click', toggleMenu);
+});
+
+
+// --- COOKIE POPUP LOGIC ---
+const cookiePopup = document.getElementById('cookie-popup');
+const cookieAcceptBtn = document.getElementById('cookie-accept');
+
+const checkCookieConsent = () => {
+    const isAccepted = localStorage.getItem('eonix_cookies_accepted');
+    if (!isAccepted) {
+        // Показываем через 2 секунды после загрузки
+        setTimeout(() => {
+            cookiePopup.classList.add('show');
+        }, 2000);
+    }
+};
+
+cookieAcceptBtn.addEventListener('click', () => {
+    localStorage.setItem('eonix_cookies_accepted', 'true');
+    cookiePopup.classList.remove('show');
+});
+
+// Инициализация
+checkCookieConsent();
+lucide.createIcons();
